@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background:#98D8AA;
+}
+.banner{
+    padding: 20px;
+    font-size: 3em;
+    font-family:'Rubik', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    height: 300px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/entregan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: azure;
+}
+header nav{
+    background: #F7D060;  
+    height: 100px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav a{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background: #F3E99F;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2em;
+    font-family:'PT Sans', sans-serif; 
+    text-decoration: none;
+    color: #101311;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav a:hover{
+    background-color: #101311;
+    color: #F7D060;
+    transform: scale(1.2,1.2);
+}
+footer {
+    background: #F7D060;
+    text-align: start;
+    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 6fr 10fr;
+}
+
+.logo {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: end;
+}
+#icono{
+    display: flex;
+    text-align: end;
+}
+.contenedor{
+    background:linear-gradient(rgba(255, 255, 255, 0.705), #98D8AA) ;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    width: 450px;
+    font-family:'PT Sans', sans-serif;
+    }
+.contenedor img{
+    border-radius: 20px;
+}
+main{
+    background-image: url(../imagenes/gym.png); 
+        background-size: cover;
+   
+}
+.contenido{
+    background: rgba(0, 0, 0, 0.084);
+ display: grid;
+  display: grid;
+  justify-content: center;
+}
+#boton{
+    padding: 20px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #101311;
+    color: #98D8AA;
+    font-size: 1em;
+    font-family: 'Rubik', sans-serif;
+}
+#boton:hover{
+    transform: scale(1.25);
+    color: #F7D060;
+}
+
+/* responsive */
+@media all and (max-width: 768px){
+        header nav a{
+            padding: 3px;
+            margin: 3px;
+            background: #F3E99F;
+            width: 150px;
+            height: 50px;
+            font-size: 0.9em;
+    }   
+    .contenedor{
+        max-width: 400px;
+    }    
+    footer {
+        font-size: 0.8em;
+    }
+}
+@media all and (max-width: 425px){
+    header nav{
+        flex-direction: column;
+        height: auto;
+    }
+    .contenedor{
+        max-width: 350px;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        font-size: 0.7em;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}

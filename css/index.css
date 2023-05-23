@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #98D8AA;
+}
+
+.banner {
+    padding: 20px;
+    font-size: 3em;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/entregan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: azure;
+}
+
+header nav {
+    background: #F7D060;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background: #F3E99F;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2em;
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    color: #101311;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a:hover {
+    background-color: #101311;
+    color: #F7D060;
+    transform: scale(1.2, 1.2);
+}
+
+main {
+    background-image: url(../imagenes/gym.png);
+    background-size: cover;
+
+}
+
+/* .contenido {
+    background: rgba(0, 0, 0, 0.228);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "beneficios asociate";
+    grid-gap: 10px;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+} */
+.contenido {
+    background: rgba(0, 0, 0, 0.228);
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    padding: 20px;
+   justify-content: space-around;
+}
+
+.beneficios {
+    grid-area: beneficios;
+    background: #f3e99fd6;
+    border-radius: 5px;
+    padding: 35px;
+    line-height: 25px;
+    font-family: 'PT Sans', sans-serif;
+    width: 500px;
+}
+
+.beneficios h2 {
+    text-align: center;
+}
+
+.beneficios ul {
+    padding: 0px 0px 0px 60px;
+}
+
+.asociate {
+    grid-area: asociate;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.asociar a {
+    text-decoration: none;
+}
+
+.animacion {
+    text-align: center;
+    animation: pilates 10s linear 2s infinite;
+}
+
+@keyframes pilates {
+    0% {
+        transform: translateY();
+    }
+
+    25% {
+        transform: translateY(80px);
+    }
+
+    50% {
+        transform: translateY();
+    }
+
+    75% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY();
+    }
+}
+
+.boton {
+    padding: 30px;
+    margin: 60px;
+    background-color: #101311;
+    color: #98D8AA;
+    font-size: 3em;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    border-color: #98D8AA;
+    border-style: groove;
+    animation: boton 4s linear 2s infinite;
+}
+
+@keyframes boton {
+    0% {
+        background: #101311;
+    }
+
+    50% {
+        background: rgb(79, 79, 68);
+    }
+
+    100% {
+        background: black;
+    }
+}
+
+.boton:hover {
+    transform: scale(1.25);
+    color: #F7D060;
+}
+
+footer {
+    background: #F7D060;
+    text-align: start;
+    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 6fr 10fr;
+}
+
+.logo {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: end;
+}
+
+#icono {
+    display: flex;
+    text-align: end;
+}
+
+/* Responsive */
+@media all and (max-width: 768px) {
+    header nav a {
+        padding: 3px;
+        margin: 3px;
+        background: #F3E99F;
+        width: 150px;
+        height: 50px;
+        font-size: 0.9em;
+    }
+
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+    @keyframes pilates {
+        0% {
+            transform: translateY();
+        }
+    
+        25% {
+            transform: translateY(20px);
+        }
+    
+        50% {
+            transform: translateY();
+        }
+    
+        75% {
+            transform: translateY(-20px);
+        }
+    
+        100% {
+            transform: translateY();
+        }
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+    .beneficios{
+        width: auto;
+    }
+}
+
+@media all and (max-width: 400px) {
+    header nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenido {
+        background:none;}
+
+ .boton {
+            padding: 30px;
+            margin: 20px;
+            font-size: 2em;
+            border-radius: 5px;
+        }
+
+    .beneficios {
+        max-width: 300px;
+        font-size: 0.8em;
+    }
+    .asociate{
+        max-width: 300px;
+    }
+    @keyframes pilates {
+        0% {transform: translateY();}
+    
+        25% {
+            transform: translateY(20px);
+        }
+    
+        50% {
+            transform: translateY();
+        }
+    
+        75% {
+            transform: translateY(-20px);
+        }
+    
+        100% {
+            transform: translateY();
+        }
+    }
+    footer {
+        grid-template-columns: 1fr;
+        font-size: 0.7em;
+    }
+    .logo {
+        justify-content: center;
+    }
+}

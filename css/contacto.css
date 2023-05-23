@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background: #98D8AA;
+}
+.banner{
+    padding: 20px;
+    font-size: 3em;
+    font-family:'Rubik', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    height: 300px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imagenes/entregan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: azure;
+}
+header nav{
+    background: #F7D060;  
+    height: 100px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav a{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background: #F3E99F;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2em;
+    font-family:'PT Sans', sans-serif; 
+    text-decoration: none;
+    color: #101311;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav a:hover{
+    background-color: #101311;
+    color: #F7D060;
+    transform: scale(1.2,1.2);
+}
+footer {
+    background: #F7D060;
+    text-align: start;
+    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 6fr 10fr;
+}
+.logo {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: end;
+}
+#icono{
+    display: flex;
+    text-align: end;
+}
+main{
+    background-image: url(../imagenes/gym.png); 
+    background-size: cover;
+   
+}
+.contenido{
+    background: rgba(0, 0, 0, 0.228);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px;
+} 
+
+.formulario{
+    background: #f3e99fd6; 
+    border-radius: 5px;
+    padding: 15px;
+    font-family:'PT Sans', sans-serif; 
+    padding: 20px 40px 0px 40px;
+    display: flex;
+    justify-content: center;
+   width: 500px;
+}
+.formulario h2{
+    text-align: center;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+}
+#b1{
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #101311;
+    color: #98D8AA;
+    font-size: 1em;
+    font-family:'PT Sans', sans-serif;;
+}
+#b1:hover{
+    transform: scale(1.25);
+    color: #F7D060;
+}
+.contenedormapa{
+    background: rgba(8, 8, 8, 0.591); 
+    color: azure;
+    border-radius: 5px;
+    width: 500px;
+    padding: 35px;
+    line-height: 25px;
+    font-family:'PT Sans', sans-serif; 
+    text-align: center;
+    font-weight: bold;
+    font-family:'PT Sans', sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#textomapa h2{
+    color: #F7D060;
+}
+/* Responsive */
+@media all and (max-width: 1024px){
+
+    .formulario,.contenedormapa{
+        margin-top: 5px;
+        max-width: 350px;
+    }
+    .mapa iframe{
+        max-width: 300px;
+        max-height: 300px;
+    }  
+
+}
+@media all and (max-width: 768px){
+        header nav a{
+            padding: 3px;
+            margin: 3px;
+            background: #F3E99F;
+            width: 150px;
+            height: 50px;
+            font-size: 0.9em;
+    }   
+    .contenido{
+        flex-direction: column;
+    }
+    .formulario,.contenedormapa{
+        margin-top: 5px;
+        max-width: 432px;
+    }
+    .formulario{
+        text-align: center;
+    }
+    .mapa iframe{
+        max-width: 350px;
+        max-height: 300px;
+    }    
+    footer {
+        font-size: 0.8em;
+    }
+}
+@media all and (max-width: 425px){
+    header nav{
+        flex-direction: column;
+        height: auto;
+    }
+    .contenido{
+        flex-direction: column;
+    }
+    .formulario,.contenedormapa{
+        max-width: 350px;
+        margin-top: 5px;
+    }
+    .mapa iframe{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        font-size: 0.7em;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}
